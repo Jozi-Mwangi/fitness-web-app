@@ -1,6 +1,7 @@
 import React from 'react'
 import { borderBottom, Stack } from '@mui/system'
 import { Link } from 'react-router-dom'
+import  Logo  from "../assets/images/Logo.png"
 
 const Navbar = () => {
   return (
@@ -11,7 +12,7 @@ const Navbar = () => {
     }} px="20px" 
     >
       <Link to="/" >
-          {/* <img src={Logo} alt="logo" style={{width: "48px", height: "48px" margin: "0 20px"}} /> */}
+          <img src={Logo} alt="logo" style={{width: "48px", height: "48px", margin: "0 20px"}} />
       </Link>
       <Stack
         direction="row"
