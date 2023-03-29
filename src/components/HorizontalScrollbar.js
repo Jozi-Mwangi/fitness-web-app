@@ -8,7 +8,7 @@ import ExerciseCard from "./ExerciseCard"
 import leftArrowIcon from "../assets/icons/left-arrow.png"
 import rightArrowIcon from "../assets/icons/right-arrow.png"
 
-const leftArrow = () => {
+const LeftArrow = () => {
     const { scrollPrev } = useContext(VisibilityContext)
     return (
         <Typography onClick = {()=>scrollPrev()} className="left-arrow" >
@@ -17,7 +17,7 @@ const leftArrow = () => {
     )
 }
 
-const rightArrow = () => {
+const RightArrow = () => {
     const { scrollNext } = useContext(VisibilityContext)
     return (
         <Typography onClick = {()=>scrollNext()} className="right-arrow" >
@@ -29,7 +29,7 @@ const rightArrow = () => {
 
 const HorizontalScrollbar = ( { data, bodyPart,setBodyPart, isBodyParts } ) => {
   return (
-    <ScrollMenu LeftArrow={leftArrow} rightArrow={rightArrow} >
+    <ScrollMenu LeftArrow={LeftArrow} RightArrow={RightArrow} >
         {data.map((item) => 
             <Box 
                 key={item.id || item}
